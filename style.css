@@ -1,0 +1,153 @@
+/* Make sure the body and html cover the entire page */
+html,
+body {
+    height: 100%;
+    margin: 0;
+    overflow: hidden;
+    /* Prevent scrolling */
+}
+
+/* Body styling */
+body {
+    background-color: rgb(41, 41, 41);
+    font-family: monospace;
+    position: relative;
+    z-index: 1;
+    /* Keep the body content above the GIF */
+}
+.container {
+    padding: 60px;
+    /* Çərçivədən içəridə durması üçün */
+    position: relative;
+    z-index: 0;
+}
+/* Full-screen GIF styling */
+#gif {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    /* Use viewport width for full width */
+    height: 100vh;
+    /* Use viewport height for full height */
+    object-fit: cover;
+    /* Ensures the GIF covers the full screen */
+    animation: fadeOpacity 5s infinite alternate;
+    z-index: 0;
+    /* Put the GIF in the background */
+    pointer-events: none;
+    /* Prevent the GIF from blocking interactions */
+}
+
+/* Keyframes for the opacity animation */
+@keyframes fadeOpacity {
+    0% {
+        opacity: 0.04;
+    }
+
+    100% {
+        opacity: 0.04;
+    }
+}
+/* Styling for h4 */
+h4 {
+    font-family: monospace;
+    font-size: 15px;
+    color: rgb(53, 211, 53);
+    z-index: 10;
+    /* Ensure the login form is above the GIF */
+    position: relative;
+}
+
+/* Styling the input field */
+input[type="text"] {
+    caret-shape: block;
+    caret-color: white;
+    background: transparent;
+    border: none;
+    padding: 5px 0;
+    /* Vertical padding */
+    color: rgb(53, 211, 53);
+    font-size: 16px;
+    outline: none;
+    font-family: monospace;
+    position: relative;
+    z-index: 11;
+    /* Ensure input field is above the GIF */
+    pointer-events: auto;
+    /* Enable interaction with the input field */
+}
+
+/* Styling the terminal */
+#terminal {
+    display: none;
+    color: #00ff00;
+    font-family: monospace;
+    height: 100vh;
+    overflow-y: auto;
+    font-size: 15px;
+    padding: 60px;
+    padding-bottom: 60px;
+    /* Çərçivədən içəridə durması üçün */
+    position: relative;
+    z-index: 0;
+display: block;
+    /* Və ya flex */
+    padding: 20px 20px 60px 20px;
+    /* Üst, Sağ, Alt, Sol */
+    box-sizing: border-box;
+    /* Bu, padding-in elementin hündürlüyünə daxil olmasını təmin edir */
+    height: 100vh;
+    overflow-y: auto;
+    margin: 40px;
+}
+#terminal::after {
+    content: "";
+    display: block;
+    height: 60px;
+    /* İstədiyin boşluq ölçüsü */
+    width: 100%;
+}
+#border {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: 5;
+    pointer-events: none;
+    box-sizing: border-box;
+
+    /* 1. Kənarların əyriliyi */
+    border-radius: 150px;
+
+    /* 2. Outline əvəzinə nəhəng box-shadow */
+    /* Bu, həm kənarları qara doldurur, həm də border-radius-a uyğun əyilir */
+    box-shadow: 0 0 0 500px black;
+
+    /* 3. Daxili kölgə (Ekranın künclərini içəriyə doğru qaraldır) */
+    box-shadow:
+        0 0 0 500px black,
+        /* Xarici qara dolğu */
+        inset 0 0 100px rgba(0, 0, 0, 0.9),
+        /* Daxili dərinlik */
+        inset 0 0 30px rgba(0, 255, 0, 0.05);
+    /* Çox yüngül yaşıl parıltı */
+}
+
+/* Skan xətləri (Scanlines) daha realistik olması üçün */
+#border::before {
+    content: "";
+    position: absolute;
+    top: -100px;
+    /* Kölgənin altına düşməməsi üçün genişləndirdik */
+    left: -100px;
+    right: -100px;
+    bottom: -100px;
+    background: linear-gradient(rgba(18, 16, 16, 0) 50%,
+            rgba(0, 0, 0, 0.2) 50%);
+    background-size: 100% 3px;
+    z-index: 6;
+    opacity: 0.2;
+    pointer-events: none;
+}
