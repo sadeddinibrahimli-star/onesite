@@ -9,7 +9,11 @@
 </head>
 
 <body>
-    <!-- Full-screen GIF background -->
+    <!-- opening animation -->
+    <div class="intro"></div>
+    <div class="intro2">
+        <span class="logo"></span>
+    </div>
     <img id="gif" src="random.gif" alt="Description of the GIF">
     <div id="border"></div>
     <div class="container" id="login">
@@ -17,8 +21,12 @@
             Write the username:
             <input type="text" id="username" autofocus>
         </h4>
+        <h4>
+            Write the password:
+            <input type="text" id="password" autofocus>
+        </h4>
     </div>
-
+    <p id="errorMsg"></p>
     <div id="terminal"></div>
 
     <script src="script.js"></script>
