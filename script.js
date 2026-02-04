@@ -7,13 +7,10 @@ const login = document.getElementById("login");
 const terminal = document.getElementById("terminal");
 const intro = document.querySelector('.intro');
 const intro2 = document.querySelector('.intro2');
+const flashRed = document.getElementById("redLight");
 let started = false;
 // it start when press to enter 
 document.addEventListener("keydown", (e) => {
-    // if (e.target == usernameInput || passwordInput) {
-    //     startTerminal();
-    //     return;
-    // }
     if (e.key === "Enter" && !started) {
         started = true;
         if (validateForm()) {
@@ -31,7 +28,11 @@ function validateForm() {
 
     if (!user || !password) {
         errorMsg.textContent = "WRONG INPUT";
-        return false;
+        flashRed.style.opacity = '0.5';
+        setTimeout(function() {
+            flashRed.style.opacity = '0';
+        },100);
+           return false;
     }
 
     // BURADA mesaj silinir
@@ -40,7 +41,6 @@ function validateForm() {
     // burada artıq hər şey normal davam edir
     return true;
 }
-
 async function startTerminal() {
     login.style.display = "none";
     terminal.style.display = "block";
@@ -105,9 +105,9 @@ async function startTerminal() {
     await printLine("Decrypting files...");
     await printLine("Verification complete ✔");
     await printLine("System ready.");
-    // setTimeout(() => {
-    //     window.location.href = "flower.html"
-    // })
+    setTimeout(() => {
+        window.location.href = "flower.html"
+    })
 }
 
 function printLine(text, delay = 300) {
@@ -134,4 +134,4 @@ window.addEventListener('DOMContentLoaded', () => {
         intro2.style.top = '100%';
 
     }, 0.1)
-})
+}); 
