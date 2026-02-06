@@ -16,7 +16,7 @@ function fkey(e) {
     }
 }
 // in here also refresh button
-window.onload = function() {
+window.onload = function () {
     // Check if the page is being refreshed
     if (performance.navigation.type == 1) {
         // Redirect to another site if the page is refreshed
