@@ -1,6 +1,3 @@
-// clear line code yaz
-
-
 const usernameInput = document.getElementById("username");
 const passwordInput = document.getElementById("password")
 const login = document.getElementById("login");
@@ -8,6 +5,9 @@ const terminal = document.getElementById("terminal");
 const intro = document.querySelector('.intro');
 const intro2 = document.querySelector('.intro2');
 const flashRed = document.getElementById("redLight");
+const startButton = document.getElementById("tvButton")
+const offScreen = document.getElementById("screen")
+const mainScreen = document.getElementById("mainScreen")
 let started = false;
 // it start when press to enter 
 document.addEventListener("keydown", (e) => {
@@ -123,15 +123,60 @@ function printLine(text, delay = 300) {
 function rand() {
     return Math.floor(Math.random() * 256);
 }
-window.addEventListener('DOMContentLoaded', () => {
-    setTimeout(() => {
-        intro.style.top = '-100%';
+let buttonOffOn = 0;
+startButton.addEventListener("click", function(){
+    if (buttonOffOn == 0) {
+        startScreen();
+        buttonOffOn+=1;
+    } else if(buttonOffOn >0) {
+        finishesScreen();
+        buttonOffOn-= 1;
+    }
+});
 
-    }, 0.1)
-})
-window.addEventListener('DOMContentLoaded', () => {
+function startScreen() {
+    console.log("h")
+    mainScreen.animate(
+        [
+            { opacity: 0 },
+            { opacity: 1 }
+        ],
+        {
+            duration: 100,
+            easing: 'ease-in-out',
+            fill: 'forwards'
+        }
+    );
+    offScreen.animate(
+        [
+            { opacity: 1 },
+            { opacity: 0},
+        ],
+        {
+            duration: 1000,
+            easing: 'ease-in-out',
+            fill: 'forwards'
+        }
+    );
     setTimeout(() => {
-        intro2.style.top = '100%';
+        offScreen.classList.remove('screen');
+    }, 1000)
+}
 
-    }, 0.1)
-}); 
+function finishesScreen() {
+    console.log("h")
+    setTimeout(() => {
+        offScreen.classList.add('screen');
+    }, 1000)
+    offScreen.animate(
+        [
+            { opacity: 0 },
+            { opacity: 1 },
+        ],
+        {
+            duration: 2000,
+            easing: 'ease-in-out',
+            fill: 'forwards'
+        }
+    );
+}

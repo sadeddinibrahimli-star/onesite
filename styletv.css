@@ -1,79 +1,168 @@
 body {
-    background-color: rgb(0, 0, 0);
+    background-color: rgb(15, 15, 15);
     margin: 0;
     min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
-
 .tv {
     position: relative;
     width: 900px;
-    /* böyüdü */
     height: 480px;
-    /* böyüdü */
 }
-
+.tvAntenas {
+    width: 150px;
+    height: 150px;
+    position: relative;
+}
+.antenasBase {
+    width: 130px;
+    height: 60px;
+    background: radial-gradient(circle at 50% 0%, #ffe4e1, #d8b0b0);
+    z-index: -2;
+    position: absolute;
+    border-radius: 100px 100px 10px 10px;
+    margin-top: -240px;
+    margin-left: 460px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+.antenasBottom {
+    width: 200px;
+    height: 25px;
+    background: linear-gradient(to bottom, #ffe4e1, #bc8f8f);
+    border-radius: 50px;
+    position: absolute;
+    z-index: -1;
+    margin-top: -180px;
+    margin-left: 425px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.4);
+}
+.antenasSpine1,
+.antenasSpine2 {
+    width: 250px;
+    height: 5px;
+    background: linear-gradient(to right, #666, #e67164, #666);
+    position: absolute;
+    z-index: -3;
+    border-radius: 5px;
+}
+.antenasSpine1 {
+    rotate: 35deg;
+    margin-top: -270px;
+    margin-left: 350px;
+}
+.antenasSpine2 {
+    rotate: 145deg;
+    margin-top: -270px;
+    margin-left: 450px;
+}
+.spineBall1,
+.spineBall2 {
+    position: absolute;
+    width: 22px;
+    height: 22px;
+    background: radial-gradient(circle at 30% 30%, cadetblue, #2f4f4f);
+    z-index: -3;
+    border-radius: 100%;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.5);
+}
+.spineBall1 {
+    margin-top: -355px;
+    margin-left: 355px;
+}
+.spineBall2 {
+    margin-top: -355px;
+    margin-left: 670px;
+}
 .tvFrame {
-    background-color: burlywood;
+    background: linear-gradient(145deg, #d2a679, #5d3a1a);
     height: 480px;
     width: 900px;
-    border-radius: 3%;
+    border-radius: 45px;
     position: absolute;
-    z-index: 0;
-    background-image: url("wood5\.jpg");
+    z-index: 1;
+    box-shadow:
+        20px 20px 60px #000000,
+        inset 2px 2px 5px rgba(255, 255, 255, 0.2);
 }
-
+.tvBorder {
+    position: absolute;
+    width: 610px;
+    height: 430px;
+    margin-top: 25px;
+    margin-left: 25px;
+    z-index: 4;
+    pointer-events: none;
+    border-radius: 35px;
+    box-shadow:
+        inset 20px 20px 30px rgba(0, 0, 0, 0.9),
+        inset -10px -10px 20px rgba(255, 255, 255, 0.1),
+        0 0 0 8px #2a1b15;
+}
 .screen {
     margin-top: 30px;
     margin-left: 30px;
-    background-color: darksalmon;
+    background: radial-gradient(circle, #333 0%, #000 100%);
     height: 420px;
-    /* 350 → 420 (+20%) */
     width: 600px;
-    /* 500 → 600 (+20%) */
     z-index: 1;
     position: absolute;
-    border-radius: 3%;
+    border-radius: 50px / 20px;
+    overflow: hidden;
+    border: 1px solid #111;
 }
-
+.screen::after {
+    content: "";
+    position: absolute;
+    top: -20%;
+    left: -10%;
+    width: 150%;
+    height: 150%;
+    background: radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.08) 0%, transparent 40%);
+    pointer-events: none;
+}
 .side {
     height: 420px;
-    width: 240px;
+    width: 230px;
     position: absolute;
     z-index: 1;
     margin-top: 30px;
-    margin-left: 650px;
-    border-radius: 3%;
-    background-image: url("wood6.jpg");
+    margin-left: 645px;
+    border-radius: 20px;
+    background: linear-gradient(145deg, #3f1f12, #26120b);
+    box-shadow: inset 5px 5px 15px rgba(0, 0, 0, 0.5);
 }
-
-button {
-    background-color: darkgreen;
-    width: 70px;
-    height: 70px;
-    z-index: 2;
-    position: absolute;
-    border-radius: 100%;
-    margin-top: 330px;
-    margin-left: 730px;
-}
-
 .tvSpeaker {
-    width: 180px;
+    width: 190px;
     height: 230px;
     position: absolute;
     z-index: 2;
-    margin-top: 60px;
-    margin-left: 680px;
-    background-color: black;
-    background-image:
-        linear-gradient(45deg, #252525 25%, transparent 25%),
-        linear-gradient(-45deg, #462f2f 25%, transparent 25%),
-        linear-gradient(45deg, transparent 75%, #252525 75%),
-        linear-gradient(-45deg, transparent 75%, #462f2f 75%);
-    background-size: 4px 4px;
-    background-position: 0 0, 0 10px, 10px -10px, -10px 0px;
-    border-radius: 13%;
+    margin-top: 50px;
+    margin-left: 665px;
+    background-color: #1a1a1a;
+    background-image: radial-gradient(#333 1.5px, transparent 1.5px);
+    background-size: 6px 6px;
+    border-radius: 15px;
+    box-shadow: inset 4px 4px 10px #000;
+}
+button {
+    background: linear-gradient(145deg, #5a2d12, #2a1305);
+    width: 80px;
+    height: 80px;
+    z-index: 5;
+    position: absolute;
+    border-radius: 50%;
+    margin-top: 320px;
+    margin-left: 720px;
+    border: 4px solid #1a0a05;
+    box-shadow:
+        6px 6px 12px rgba(0, 0, 0, 0.6),
+        inset 2px 2px 5px rgba(255, 255, 255, 0.1);
+    cursor: pointer;
+    transition: transform 0.1s;
+}
+button:active {
+    transform: scale(0.95);
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
 }

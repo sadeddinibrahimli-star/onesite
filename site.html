@@ -9,28 +9,44 @@
 </head>
 
 <body>
-    
-    <!-- opening animation -->
-    <div class="intro"></div>
-    <div class="intro2">
-        <span class="logo"></span>
-    </div>
-    <img id="gif" src="random.gif" alt="Description of the GIF">
-    <div id="border"></div>
-    
-    <div class="container" id="login">
-        <h4 class="username">
-            Write the username:
-            <input type="text" id="username" autofocus>
-        </h4>
-        <h4 class="password">
-            Write the password:
-            <input type="text" id="password" autofocus>
-        </h4>
-    </div>
-    <div id="redLight" class= "glitch"></div>
-    <p id="errorMsg"></p>
-    <div id="terminal"></div>
+        <div class="tvAntenas">
+            <div class="antenasBase"></div>
+            <div class="antenasSpine1"></div>
+            <div class="antenasSpine2"></div>
+            <div class="spineBall1"></div>
+            <div class="spineBall2"></div>
+            <div class="antenasBottom"></div>
+        </div>
+        
+        <div class="tv">
+            <div class="tvBorder"></div>
+            <div class="tvFrame"></div>
+            <div class="screen" id="screen"></div>
+        <div id="mainScreen" class="mainScreen">
+            <div class="intro"></div>
+            <div class="intro2"> </div>
+            <img id="gif" src="random.gif" alt="Description of the GIF">
+            <div id="border"></div>
+            <div class="container" id="login">
+                <h4 class="username">
+                    Write the username:
+                    <input type="text" id="username" autofocus autocomplete="off">
+                </h4>
+                <h4 class="password">
+                    Write the password:
+                    <input type="text" id="password" autofocus autocomplete="off">
+                </h4>
+            </div>
+            <div id="redLight" class= "glitch"></div>
+            <p id="errorMsg"></p>
+            <div id="terminal"></div>
+        </div>
+            <div class="side"></div>
+            <div class="tvSpeaker"></div>
+            <div id="tvButton">
+                <button></button>
+            </div>
+        </div>
     <script src="script.js"></script>
 </body>
 
