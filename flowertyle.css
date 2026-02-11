@@ -1,0 +1,396 @@
+html,
+body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100vh;
+    overflow: hidden;
+    overflow: hidden;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    background-color: #000000;
+}
+
+@property --r {
+    syntax: '<length>';
+    inherits: false;
+    initial-value: 0px;
+}
+
+.test {
+    width: 100%;
+    height: 100%;
+    --r: 0px;
+
+    background: radial-gradient(circle var(--r) at bottom,
+            #eeff00,
+            #b21f1f,
+            #000000);
+
+    animation: grow 3s ease-in-out forwards;
+}
+
+@keyframes grow {
+    from {
+        --r: 0px;
+    }
+
+    to {
+        --r: 1700px;
+    }
+}
+
+.sky {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 0;
+}
+
+[class^="star"] {
+    position: absolute;
+    background-color: white;
+    border-radius: 50%;
+    filter: blur(1px);
+    box-shadow: 0 0 10px white;
+    animation: twinkle 3s infinite ease-in-out;
+}
+
+.star1 {
+    width: 4px;
+    height: 5px;
+    top: 10%;
+    left: 15%;
+    animation-delay: 0s;
+}
+
+.star2 {
+    width: 3px;
+    height: 3px;
+    top: 25%;
+    left: 80%;
+    animation-delay: 1s;
+}
+
+.star3 {
+    width: 2px;
+    height: 2px;
+    top: 40%;
+    left: 50%;
+    animation-delay: 0.5s;
+}
+
+.star4 {
+    width: 7px;
+    height: 7px;
+    top: 15%;
+    right: 20%;
+    animation-delay: 1.5s;
+}
+
+.star5 {
+    width: 2px;
+    height: 2px;
+    bottom: 50%;
+    left: 10%;
+    animation-delay: 2s;
+}
+
+@keyframes twinkle {
+
+    0%,
+    100% {
+        opacity: 0.3;
+        transform: scale(1);
+    }
+
+    50% {
+        opacity: 1;
+        transform: scale(2);
+    }
+}
+
+.grass {
+    width: 120%;
+    height: 40vh;
+    background: linear-gradient(to bottom, hsl(113, 40%, 25%), #29501d);
+    border-radius: 50% 50% 0 0;
+    position: absolute;
+    bottom: -15vh;
+    left: -8%;
+    z-index: 0;
+    box-shadow: 0 -10px 50px rgba(0, 0, 0, 0.5);
+}
+
+.flower1 {
+    position: absolute;
+    z-index: 3;
+    filter: drop-shadow(0 0 15px rgba(238, 82, 134, 0.4));
+    top: 70%;
+    left: 50%;
+}
+
+[class^="flower"] {
+    .FlowerSteam {
+        width: 6px;
+        height: 200px;
+        background: linear-gradient(to top, #134e1a, #388004);
+        border-radius: 4px;
+        margin: 0 auto;
+        position: relative;
+        z-index: 1;
+    }
+
+    [class^="FlowerPetal"] {
+        position: absolute;
+        bottom: 180px;
+        left: 50%;
+        width: 40px;
+        height: 70px;
+        background: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #feada6 100%);
+        border-radius: 50% 50% 50% 50%;
+        transform-origin: bottom center;
+        z-index: 2;
+    }
+
+    .FlowerPetal1 {
+        transform: translateX(-50%) rotate(-30deg);
+        top: -10%;
+    }
+
+    .FlowerPetal2 {
+        transform: translateX(-50%) rotate(0deg);
+        top: -10%;
+    }
+
+    .FlowerPetal3 {
+        transform: translateX(-50%) rotate(30deg);
+        top: -10%;
+    }
+}
+
+.flower2 {
+    position: absolute;
+    left: 40%;
+    bottom: 9%;
+}
+
+.flower3 {
+    position: absolute;
+    right: 40%;
+    bottom: 9%;
+}
+
+.flower1,
+.flower2,
+.flower3,
+.flower4,
+.flower5,
+.flower6,
+.flower7,
+.flower8,
+.flower9,
+.flower10,
+.flower11,
+.flower12,
+.flower13,
+.flower14,
+.flower15,
+.flower16,
+.flower17,
+.flower18,
+.flower19,
+.flower20 {
+    position: absolute;
+    bottom: 0;
+    animation: wind 6s ease-in-out infinite;
+    will-change: transform;
+    z-index: 4;
+}
+
+.flower1 {
+    left: 5%;
+    bottom: 2%;
+    animation-duration: 6s;
+    animation-delay: -1s;
+}
+
+.flower2 {
+    left: 45%;
+    bottom: 10%;
+    animation-duration: 7s;
+    animation-delay: -2s;
+}
+
+.flower3 {
+    left: 70%;
+    bottom: 20%;
+    animation-duration: 5.5s;
+    animation-delay: -4s;
+}
+
+.flower4 {
+    left: 62%;
+    bottom: 15%;
+    animation-duration: 5.8s;
+    animation-delay: -1.5s;
+}
+
+.flower5 {
+    left: 12%;
+    bottom: 0%;
+    animation-duration: 5.5s;
+    animation-delay: -3s;
+    z-index: 5;
+}
+
+.flower6 {
+    left: 55%;
+    bottom: 4%;
+    animation-duration: 6.2s;
+    animation-delay: -0.5s;
+}
+
+.flower7 {
+    left: 78%;
+    bottom: 8%;
+    animation-duration: 5.4s;
+    animation-delay: -2.2s;
+}
+
+.flower8 {
+    left: 2%;
+    bottom: 12%;
+    animation-duration: 5.9s;
+    animation-delay: -3.5s;
+}
+
+.flower9 {
+    left: 18%;
+    bottom: 13%;
+    animation-duration: 5.3s;
+    animation-delay: -1.2s;
+}
+
+.flower10 {
+    left: 8%;
+    bottom: 6%;
+    animation-duration: 6.5s;
+    animation-delay: -4.8s;
+}
+
+.flower11 {
+    left: 32%;
+    bottom: 6%;
+    animation-duration: 5.7s;
+    animation-delay: -2.5s;
+}
+
+.flower12 {
+    left: 25%;
+    bottom: 18%;
+    animation-duration: 6.1s;
+    animation-delay: -3.1s;
+    z-index: 1;
+}
+
+.flower13 {
+    left: 51%;
+    bottom: 17%;
+    animation-duration: 5.2s;
+    animation-delay: -0.8s;
+    z-index: 1;
+}
+
+.flower14 {
+    left: 21%;
+    bottom: 10%;
+    animation-duration: 6.4s;
+    animation-delay: -4.2s;
+    z-index: 4;
+}
+
+.flower15 {
+    left: 84%;
+    bottom: 13%;
+    animation-duration: 5.6s;
+    animation-delay: -1.9s;
+    z-index: 4;
+}
+
+.flower16 {
+    left: 93%;
+    bottom: 3%;
+    animation-duration: 6.8s;
+    animation-delay: -3.7s;
+    z-index: 4;
+}
+
+.flower17 {
+    left: 88%;
+    bottom: 22%;
+    animation-duration: 5.1s;
+    animation-delay: -2.8s;
+    z-index: 1;
+}
+
+.flower18 {
+    left: 40%;
+    bottom: 3%;
+    animation-duration: 6.3s;
+    animation-delay: -1.4s;
+    z-index: 4;
+}
+
+.flower19 {
+    left: 35%;
+    bottom: 1%;
+    animation-duration: 5.9s;
+    animation-delay: -4.1s;
+    z-index: 4;
+}
+
+.flower20 {
+    left: 68%;
+    bottom: 23%;
+    animation-duration: 5.5s;
+    animation-delay: -0.2s;
+    z-index: 4;
+}
+
+@keyframes wind {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    20% {
+        transform: rotate(2deg);
+    }
+
+    40% {
+        transform: rotate(-3deg);
+    }
+
+    60% {
+        transform: rotate(1.5deg);
+    }
+
+    80% {
+        transform: rotate(-2deg);
+    }
+
+    100% {
+        transform: rotate(0deg);
+    }
+}
+
+.FlowerPetal1,
+.FlowerPetal2,
+.FlowerPetal3 {
+    animation: petalMove 4s ease-in-out infinite;
+}

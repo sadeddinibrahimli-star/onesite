@@ -22,26 +22,13 @@ body {
 
 #gif {
     position: absolute;
-    top: 0;
-    left: 0;
     width: 600px;
     height: 420px;
     object-fit: cover;
-    animation: fadeOpacity 5s infinite alternate;
+    opacity: 0.09;
     z-index: 6;
     pointer-events: none;
 }
-
-@keyframes fadeOpacity {
-    0% {
-        opacity: 0.04;
-    }
-
-    100% {
-        opacity: 0.08;
-    }
-}
-
 h4 {
     font-family: monospace;
     font-size: 13px;
@@ -176,7 +163,7 @@ input[type="text"] {
 .antenasBase {
     width: 130px;
     height: 60px;
-    background: radial-gradient(circle at 50% 0%, #ffe4e1, #d8b0b0);
+    background: radial-gradient(circle at 50% 0%, #999B9B, #e4e2e2);
     z-index: -2;
     position: absolute;
     border-radius: 100px 100px 10px 10px;
@@ -187,9 +174,9 @@ input[type="text"] {
 
 .antenasBottom {
     width: 200px;
-    height: 25px;
-    background: linear-gradient(to bottom, #ffe4e1, #bc8f8f);
-    border-radius: 50px;
+    height: 50px;
+    background: linear-gradient(to bottom, #999B9B, #e4e2e2);
+    border-radius: 40px;
     position: absolute;
     z-index: -1;
     margin-top: -180px;
@@ -201,7 +188,7 @@ input[type="text"] {
 .antenasSpine2 {
     width: 250px;
     height: 5px;
-    background: linear-gradient(to right, #666, #e67164, #666);
+    background: linear-gradient(to right, #888B90, #a5a5a5, #888B90);
     position: absolute;
     z-index: -3;
     border-radius: 5px;
@@ -353,4 +340,63 @@ button {
 button:active {
     transform: scale(0.95);
     box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.8);
+}
+:root {
+    --scale: 1;
+}
+
+body {
+    background-color: rgb(46, 46, 46);
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+.tvAntenas {
+    width: 150px;
+    height: 50px;
+    transform: scale(var(--scale));
+    margin-bottom: 20px;
+}
+.antenasBase { margin: 0; left: 300px; top: 9px; }
+.antenasBottom { margin: 0; left: 270px; top: 50px; }
+.antenasSpine1 { margin: 0; left: 150px; top: 0px; }
+.antenasSpine2 { margin: 0; left: 320px; top: 0px; }
+.spineBall1 { margin: 0; left: 150px; top: -88px; }
+.spineBall2 { margin: 0; left: 545px; top: -87px; }
+.tv {
+    position: relative;
+    width: 900px;
+    height: 480px;
+    transform: scale(var(--scale));
+    transform-origin: center center;
+    flex-shrink: 0;
+}
+@media (min-width: 1200px) {
+    --scale: 1;
+}
+@media (max-width: 1024px) {
+    :root { --scale: 0.85; }
+}
+@media (max-width: 768px) {
+    :root { --scale: 0.6; }
+}
+@media (max-width: 576px) {
+    :root { --scale: 0.45; }
+    .tvAntenas{
+        opacity: 0;
+    }
+}
+@media (max-width: 360px) {
+    :root { --scale: 0.33; }
+    .tvAntenas {
+        opacity: 0;
+    }
+}
+.container {
+    position: relative;
+    z-index: 10;
 }
