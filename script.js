@@ -106,7 +106,7 @@ async function startTerminal() {
     await printLine("Verification complete ✔");
     await printLine("System ready.");
     setTimeout(() => {
-        window.location.href = "flower.html"
+        window.location.href = "flowerSite.html"
     })
 }
 

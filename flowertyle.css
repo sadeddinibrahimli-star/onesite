@@ -3,16 +3,9 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    height: 100vh;
+    height: 100%;
     overflow: hidden;
     overflow: hidden;
-}
-
-body {
-    display: flex;
-    justify-content: center;
-    align-items: flex-end;
-    background-color: #000000;
 }
 
 @property --r {
@@ -223,143 +216,143 @@ body {
 .flower2 {
     left: 45%;
     bottom: 10%;
-    animation-duration: 7s;
-    animation-delay: -2s;
+    animation-duration: 6s;
+    animation-delay: -1s;
 }
 
 .flower3 {
     left: 70%;
     bottom: 20%;
-    animation-duration: 5.5s;
-    animation-delay: -4s;
+    animation-duration: 6s;
+    animation-delay: -1s;
 }
 
 .flower4 {
     left: 62%;
     bottom: 15%;
-    animation-duration: 5.8s;
-    animation-delay: -1.5s;
+    animation-duration: 6s;
+    animation-delay: -1s;
 }
 
 .flower5 {
     left: 12%;
     bottom: 0%;
-    animation-duration: 5.5s;
-    animation-delay: -3s;
-    z-index: 5;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    z-index: 7;
 }
 
 .flower6 {
     left: 55%;
     bottom: 4%;
-    animation-duration: 6.2s;
-    animation-delay: -0.5s;
+    animation-duration: 6s;
+    animation-delay: -1s;
 }
 
 .flower7 {
     left: 78%;
     bottom: 8%;
-    animation-duration: 5.4s;
-    animation-delay: -2.2s;
+    animation-duration: 6s;
+    animation-delay: -1s;
 }
 
 .flower8 {
     left: 2%;
     bottom: 12%;
-    animation-duration: 5.9s;
-    animation-delay: -3.5s;
+    animation-duration: 6s;
+    animation-delay: -1s;
 }
 
 .flower9 {
     left: 18%;
     bottom: 13%;
-    animation-duration: 5.3s;
-    animation-delay: -1.2s;
+    animation-duration: 6s;
+    animation-delay: -1s;
 }
 
 .flower10 {
     left: 8%;
     bottom: 6%;
-    animation-duration: 6.5s;
-    animation-delay: -4.8s;
+    animation-duration: 6s;
+    animation-delay: -1s;
 }
 
 .flower11 {
     left: 32%;
     bottom: 6%;
-    animation-duration: 5.7s;
-    animation-delay: -2.5s;
+    animation-duration: 6s;
+    animation-delay: -1s;
 }
 
 .flower12 {
     left: 25%;
     bottom: 18%;
-    animation-duration: 6.1s;
-    animation-delay: -3.1s;
+    animation-duration: 6s;
+    animation-delay: -1s;
     z-index: 1;
 }
 
 .flower13 {
     left: 51%;
     bottom: 17%;
-    animation-duration: 5.2s;
-    animation-delay: -0.8s;
+    animation-duration: 6s;
+    animation-delay: -1s;
     z-index: 1;
 }
 
 .flower14 {
     left: 21%;
     bottom: 10%;
-    animation-duration: 6.4s;
-    animation-delay: -4.2s;
+    animation-duration: 6s;
+    animation-delay: -1s;
     z-index: 4;
 }
 
 .flower15 {
     left: 84%;
     bottom: 13%;
-    animation-duration: 5.6s;
-    animation-delay: -1.9s;
+    animation-duration: 6s;
+    animation-delay: -1s;
     z-index: 4;
 }
 
 .flower16 {
     left: 93%;
     bottom: 3%;
-    animation-duration: 6.8s;
-    animation-delay: -3.7s;
+    animation-duration: 6s;
+    animation-delay: -1s;
     z-index: 4;
 }
 
 .flower17 {
     left: 88%;
-    bottom: 22%;
-    animation-duration: 5.1s;
-    animation-delay: -2.8s;
+    bottom: 17%;
+    animation-duration: 6s;
+    animation-delay: -1s;
     z-index: 1;
 }
 
 .flower18 {
     left: 40%;
     bottom: 3%;
-    animation-duration: 6.3s;
-    animation-delay: -1.4s;
-    z-index: 4;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    z-index: 6;
 }
 
 .flower19 {
     left: 35%;
     bottom: 1%;
-    animation-duration: 5.9s;
-    animation-delay: -4.1s;
-    z-index: 4;
+    animation-duration: 6s;
+    animation-delay: -1s;
+    z-index: 6;
 }
 
 .flower20 {
     left: 68%;
     bottom: 23%;
-    animation-duration: 5.5s;
-    animation-delay: -0.2s;
+    animation-duration: 6s;
+    animation-delay: -1s;
     z-index: 4;
 }
 
