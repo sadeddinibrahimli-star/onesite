@@ -145,7 +145,7 @@ body {
         left: 50%;
         width: 40px;
         height: 70px;
-        background: linear-gradient(to top, #ff9a9e 0%, #fecfef 99%, #feada6 100%);
+        background: linear-gradient(to top, #ff9a9e 0%,blue 99%, orange 100%);
         border-radius: 50% 50% 50% 50%;
         transform-origin: bottom center;
         z-index: 2;

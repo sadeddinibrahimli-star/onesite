@@ -26,7 +26,7 @@ function validateForm() {
     password = passwordInput.value
     let errorMsg = document.getElementById("errorMsg");
 
-    if (!user || !password) {
+    if (user != "Raiko" || password != "010725") {
         errorMsg.textContent = "WRONG INPUT";
         flashRed.style.opacity = '0.5';
         setTimeout(function() {
